@@ -1,69 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
     <EditText
         android:id="@+id/friendNameEditText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Nama Teman"
-        android:layout_margin="16dp" />
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/borrowButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:padding="6dp"
         android:text="Pinjam 100"
-        android:layout_below="@id/friendNameEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/resetButton"
+        android:layout_width="94dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="56dp"
+        android:padding="6dp"
+        android:text="Reset Saldo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/qrScannerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset Saldo"
-        android:layout_below="@id/borrowButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_centerInParent="true"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="56dp"
+        android:padding="6dp"
+        android:text="QR Scanner"
+        android:textColorHint="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/displayMessageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/resetButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text=""
-        android:textSize="20sp" />
+        android:layout_marginTop="76dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resetButton" />
 
     <TextView
         android:id="@+id/saldoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saldo: 0 rupiah"
-        android:layout_below="@id/displayMessageTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/displayMessageTextView" />
 
     <TextView
         android:id="@+id/totalPeminjamanTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Peminjaman: 0 rupiah"
-        android:layout_below="@id/saldoTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saldoTextView" />
 
     <ListView
         android:id="@+id/transactionListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/totalPeminjamanTextView"
-        android:layout_marginTop="16dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalPeminjamanTextView" />
 
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
