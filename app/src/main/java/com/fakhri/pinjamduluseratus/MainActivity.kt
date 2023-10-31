@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         friendNameEditText.setText(DEFAULT_FRIEND_NAME)
 
         saldoTextView.text = "Saldo: $saldo rupiah"
-        totalPeminjamanTextView.text = "Total Peminjaman: $totalPinjaman rupiah"
+        totalPeminjamanTextView.text = "Total Uang Yang Di Pinjam: $totalPinjaman rupiah"
 
         // Mengambil animasi dari file XML
         buttonAnimation = AnimationUtils.loadAnimation(this, R.anim.button_animation)
@@ -66,12 +66,12 @@ class MainActivity : AppCompatActivity() {
             saldo -= 100
             totalPinjaman += 100
             val currentTime = SimpleDateFormat("dd/MM/yyyy HH:mm").format(Date())
-            val message = "Anda meminjam 100 rupiah dari $friendName pada $currentTime. Saldo sekarang: $saldo rupiah."
+            val message = "Anda meminjamkan 100 rupiah untuk $friendName pada $currentTime. Saldo sekarang: $saldo rupiah."
             displayMessageTextView.text = message
             saldoTextView.text = "Saldo: $saldo rupiah"
-            totalPeminjamanTextView.text = "Total Peminjaman: $totalPinjaman rupiah"
+            totalPeminjamanTextView.text = "Total Uang Yang Di Pinjam: $totalPinjaman rupiah"
         } else if (friendName.isNotBlank() && saldo < 100) {
-            displayMessageTextView.text = "Saldo tidak mencukupi untuk melakukan peminjaman."
+            displayMessageTextView.text = "Saldo tidak mencukupi untuk melakukan transaksi."
         } else {
             displayMessageTextView.text = "Masukkan nama teman Anda."
         }
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         saldo = 500
         totalPinjaman = 0
         saldoTextView.text = "Saldo: $saldo rupiah"
-        totalPeminjamanTextView.text = "Total Peminjaman: $totalPinjaman rupiah"
+        totalPeminjamanTextView.text = "Total Uang Yang Di Pinjam: $totalPinjaman rupiah"
         displayMessageTextView.text = "Saldo telah direset."
     }
 }
