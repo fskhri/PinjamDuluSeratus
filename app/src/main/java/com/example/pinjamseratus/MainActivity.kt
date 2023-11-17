@@ -1,11 +1,10 @@
-package com.example.kantongku
+package com.example.pinjamseratus
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
-import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import com.google.android.material.tabs.TabLayoutMediator
 

@@ -1,4 +1,4 @@
-package com.example.kantongku
+package com.example.pinjamseratus
 
 import org.junit.Test
 

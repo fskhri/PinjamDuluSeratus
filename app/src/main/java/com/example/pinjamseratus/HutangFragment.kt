@@ -1,4 +1,4 @@
-package com.example.kantongku
+package com.example.pinjamseratus
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -8,7 +8,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.kantongku"
+        applicationId "com.example.pinjamseratus"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -34,7 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'com.example.kantongku'
+    namespace 'com.example.pinjamseratus'
 }
 
 dependencies {
